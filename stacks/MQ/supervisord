@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -m
+
+zookeeper-server-start $CONFLUENT_HOME/etc/kafka/zookeeper.properties &
+
+kafka-server-start $CONFLUENT_HOME/etc/kafka/server.properties &
+
+fg %1
